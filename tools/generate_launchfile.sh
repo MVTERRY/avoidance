@@ -61,6 +61,11 @@ for camera in $CAMERA_CONFIGS; do
 				<arg name="enable_pointcloud"     value="false"/>
 				<arg name="enable_fisheye"        value="false"/>
 			</include>
+
+      <!-- launch node to throttle depth images for logging -->
+      <node name="drop" pkg="topic_tools" type="drop" output="screen"
+        args="/$1/depth/image_rect_raw" 14 15">
+      </node>
 		EOM
 
     # Append to the realsense auto exposure toggling
