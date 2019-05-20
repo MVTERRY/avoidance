@@ -11,7 +11,7 @@ namespace avoidance {
 float distance2DPolar(const PolarPoint& p1, const PolarPoint& p2) {
   return sqrt((p1.e - p2.e) * (p1.e - p2.e) + (p1.z - p2.z) * (p1.z - p2.z));
 }
-
+// This is testing my coding on web capabilities
 Eigen::Vector3f polarToCartesian(const PolarPoint& p_pol,
                                  const Eigen::Vector3f& pos) {
   Eigen::Vector3f p;
